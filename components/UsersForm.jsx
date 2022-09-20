@@ -18,7 +18,9 @@ function Usersform({ getUsers, userSelected, deselectUser }) {
 
     const submit = (data) => {
         if(userSelected){
-           
+            axios.put(`https://users-crud1.herokuapp.com/users/${userSelected.id}/`, data)
+                .then(() => getUsers())
+                .catch((error) => console.log(error.response))
         } else {
             
             axios.post("https://users-crud1.herokuapp.com/users/", data)
@@ -61,8 +63,8 @@ function Usersform({ getUsers, userSelected, deselectUser }) {
                 <input type="date" id='birthday' {...register("birthday")} />
             </div>
             <div className="add-btns">
-                <button className='btn'>Upload</button>
-                <button onClick={clear} className='btn'>Clear</button>
+                <button className='upload-btn'>Upload</button>
+                <button onClick={clear} className='upload-btn'>Clear</button>
             </div>
             
         </form>

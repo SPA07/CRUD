@@ -5,21 +5,28 @@
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: #e9deea;
+  background-image: url(./assets/images/pexels-bruno-thethe-1910225.jpg);
+  background-size: cover;
 }
 
 .main-container {
-  border: 1px solid;
-  width: 90%;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  width: 50%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 130px;
   padding: 20px 0;
   display: flex;
+  background: rgba(94, 1, 1, 0.841);
+  background: linear-gradient(90deg, rgba(241,8,8,0.7819502801120448) 0%);
 }
 
 form {
   /* border: 1px solid; */
-  /* border-radius: 10px; */
+  border-radius: 10px;
+  background: rgb(45, 45, 186);
+  background: linear-gradient(rgba(32, 32, 221, 0.766) 12%);
+  color: #fff;
   text-align: left;
   margin: 0 auto;
   margin-top: 50px;
@@ -27,6 +34,7 @@ form {
   margin-right: 0;
   padding: 15px 15px;
   width: 300px;
+  box-shadow: rgba(254, 2, 2, 0.3) 0px 19px 38px, rgba(252, 252, 252, 0.22) 0px 15px 12px;
 }
 
 .userList-container label {
@@ -34,23 +42,49 @@ form {
 }
 
 .userList-container input {
-  border: none;
-  border-bottom: 1px solid;
-  /* border-radius: 5px; */
-  background-color: #e9deea;
+  border-style: none;
+  border: 1px solid;
+  border-color: #000;
+  border-radius: 25px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(32,32,221,0) 0%, rgba(110,185,200,0) 0%);
   width: 85%;
   padding: 15px;
+  margin-top: 10px;
   margin-bottom: 20px;
   font-size: 16px;
+  color: #fff;
+}
+
+.line {
+  border-top: 2px solid;
+  margin-top: 10px;
+  width: 200px;
+  align-self: center;
+}
+
+.line-dw {
+  border-top: 2px solid;
+  margin-top: 15px;
+  width: 200px;
+  align-self: center;
 }
 
 .upload-btn {
-  border: none;
+  border: 1px solid;
   border-radius: 10px;
   background-color: #3fb5e0;
   color: #fff;
-  width: 95%;
+  width: 25%;
   padding: 15px;
+  justify-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.add-btns {
+  display: flex;
+  justify-content: center;
 }
 
 .upload-btn:hover {
@@ -71,7 +105,7 @@ form {
   margin-left: 25px;
   padding-top: 50px;
   width: 500px;
-  height: 400px;
+  height: 450px;
 }
 
 
@@ -86,7 +120,7 @@ ul.users-list {
   padding: 0;
   padding-bottom: 20px;
   width: 450px;
-  height: 310px;
+  height: 380px;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -105,29 +139,43 @@ ul.users-list::-webkit-scrollbar-thumb {
 .user-card {
   /* border: 1px solid; */
   border-radius: 25px;
-  background-color: #c03907a1;
+  background: rgba(88, 224, 255, 0.815);
+  background: linear-gradient(90deg, rgba(226, 52, 171, 0.389) 0%);
   margin: 0 auto;
   margin-top: 20px;
   padding: 5px;
   padding-bottom: 10px;
   width: 350px;
+  height: 350px;
   justify-self: center;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  box-shadow: rgba(245, 245, 245, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.names {
-  border: 1px solid #ed0e0e9e;
-  border-radius: 75%;
-  background-color: #ed0e0e9e;
-  
+.img-container  {
+  border: 1px solid;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+  background-image: url(./assets/images/212101.png);
+  background-size: contain;
+  background-color: #000;
+}
+
+.email {
+  margin-bottom: 20px;
 }
 
 .btns-container {
   /* border: 1px solid; */
   width: 20%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,4 +183,5 @@ ul.users-list::-webkit-scrollbar-thumb {
 
 .btns-container i:hover {
   cursor: pointer;
+  color: rgb(197, 48, 48);
 }
